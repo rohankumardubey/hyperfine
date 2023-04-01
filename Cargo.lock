@@ -111,13 +111,38 @@ dependencies = [
 ]
 
 [[package]]
-name = "clap_complete"
-version = "3.0.5"
+name = "clap"
+version = "4.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "be4dabb7e2f006497e1da045feaa512acf0686f76b68d94925da2d9422dcb521"
+checksum = "046ae530c528f252094e4a77886ee1374437744b2bff1497aa898bbddbbb29b3"
 dependencies = [
- "clap",
+ "clap_builder",
 ]
+
+[[package]]
+name = "clap_builder"
+version = "4.2.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "223163f58c9a40c3b0a43e1c4b50a9ce09f007ea2cb1ec258a687945b4b7929f"
+dependencies = [
+ "bitflags",
+ "clap_lex",
+]
+
+[[package]]
+name = "clap_complete"
+version = "4.2.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "01c22dcfb410883764b29953103d9ef7bb8fe21b3fa1158bc99986c2067294bd"
+dependencies = [
+ "clap 4.2.1",
+]
+
+[[package]]
+name = "clap_lex"
+version = "0.4.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "8a2dd5a6fe8c6e3502f568a6353e5273bbb15193ad9a89e457b9970798efbea1"
 
 [[package]]
 name = "cloudabi"
@@ -256,7 +281,7 @@ dependencies = [
  "approx",
  "assert_cmd",
  "atty",
- "clap",
+ "clap 3.0.14",
  "clap_complete",
  "colored",
  "csv",
